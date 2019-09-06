@@ -1,0 +1,19 @@
+{
+    "scripts": {
+        "build:angular-component": "cd components/angular/angular-card-component && yarn && yarn build:prod",
+        "build:react-component": "cd components/react/react-card-component && yarn && yarn build:prod",
+        "build:vue-component": "cd components/vue/vue-card-component && yarn && yarn build:prod",
+        "build:lit-component": "cd components/lit/lit-card-component && yarn && yarn build:prod",
+        "copy:components-angular-app":"cp components/angular/angular-card-component/dist/angular-card/angular-card-component.js projects/angular/webcomponents-project/src/assets/web-components && cp components/lit/lit-card-component/dist/lit-card-component.js projects/angular/webcomponents-project/src/assets/web-components && cp components/react/react-card-component/dist/react-card-component.js projects/angular/webcomponents-project/src/assets/web-components && cp components/vue/vue-card-component/dist/vue-card-component.js projects/angular/webcomponents-project/src/assets/web-components",
+        "copy:components-lit-app": "cp components/angular/angular-card-component/dist/angular-card/angular-card-component.js projects/lit/webcomponents-project/src/webcomponents && cp components/lit/lit-card-component/dist/lit-card-component.js projects/lit/webcomponents-project/src/webcomponents && cp components/react/react-card-component/dist/react-card-component.js projects/lit/webcomponents-project/src/webcomponents && cp components/vue/vue-card-component/dist/vue-card-component.js projects/lit/webcomponents-project/src/webcomponents",
+        "copy:components-react-app":"cp components/angular/angular-card-component/dist/angular-card/angular-card-component.js projects/react/webcomponents-project/public/webcomponents && cp components/lit/lit-card-component/dist/lit-card-component.js projects/react/webcomponents-project/public/webcomponents && cp components/react/react-card-component/dist/react-card-component.js projects/react/webcomponents-project/public/webcomponents && cp components/vue/vue-card-component/dist/vue-card-component.js projects/react/webcomponents-project/public/webcomponents",
+        "copy:components-vue-app":"cp components/angular/angular-card-component/dist/angular-card/angular-card-component.js projects/vue/webcomponents-project/public/webcomponents && cp components/lit/lit-card-component/dist/lit-card-component.js projects/vue/webcomponents-project/public/webcomponents && cp components/react/react-card-component/dist/react-card-component.js projects/vue/webcomponents-project/public/webcomponents && cp components/vue/vue-card-component/dist/vue-card-component.js projects/vue/webcomponents-project/public/webcomponents",
+        "serve:react":"cd projects/react/webcomponents-project && yarn serve",
+        "serve:angular":"cd projects/angular/webcomponents-project && yarn serve",
+        "serve:lit":"cd projects/lit/webcomponents-project && yarn serve",
+        "serve:vue":"cd projects/vue/webcomponents-project && yarn serve",
+        "build:all-components":"yarn build:angular-component && yarn build:react-component && yarn build:vue-component && yarn build:lit-component",
+        "copy:all-components":"yarn copy:components-angular-app && yarn copy:components-lit-app && yarn copy:components-vue-app && yarn copy:components-react-app",
+        "exec:components":"yarn build:all-components && yarn copy:all-components"
+    }
+}

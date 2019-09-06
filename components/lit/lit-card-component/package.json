@@ -1,0 +1,30 @@
+{
+  "name": "polymer-card-component",
+  "version": "0.0.1",
+  "contributors": [
+    "Silviu Boldeanu"
+  ],
+  "main": "index.js",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "copyindex": "cp src/index.html dist",
+    "copywc": "cp -r node_modules/@webcomponents/webcomponentsjs/bundles dist && cp node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js dist",
+    "build:prod": "rm -rf dist && mkdir dist && npm run copyindex && npm run copywc && rollup -c",
+    "start": "serve build:prod"
+  },
+  "dependencies": {
+    "lit-element": "2.0.1"
+  },
+  "devDependencies":   {
+    "@polymer/polymer": "3.1.0",
+    "@webcomponents/webcomponentsjs": "2.2.4",
+    "polymer-cli": "1.9.3",
+    "@babel/core": "7.2.2",
+    "@babel/plugin-proposal-class-properties": "7.2.3",
+    "@babel/plugin-proposal-decorators": "7.2.3",
+    "rollup": "1.1.0",
+    "rollup-plugin-babel": "4.3.0",
+    "rollup-plugin-node-resolve": "4.0.0",
+    "serve": "11.1.0"
+  }
+}

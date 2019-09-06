@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>Micro-frontends using Web Components</title>
+</head>
+
+<body onload="tellComponents()">
+
+ <script>
+    function tellComponents() {
+      const reactElContainer =  document.getElementById("react-container");
+      reactElContainer.addEventListener('onClick', (e) => helloEvent('React'));
+    }
+
+    function helloEvent(who) {
+      console.log(who);
+    }
+
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
+  <script src="./dist/react-card-component.js"></script>
+
+  <react-card-component
+    id="react-container"
+    title="Title"
+    body="Body"
+    button="Button"
+/>
+</body>
+</html>
