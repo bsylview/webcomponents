@@ -3,9 +3,8 @@
 Examples of integrating and turning components into webcomponents with **React**, **Angular**, **Vue** or **LitElement** 
 
 The current code is not production ready, please use it for educational purposes only!
-
 # How to build
-~~~~
+
 Yarn > 1.12.2
 
 Node version used: 12.7.0
