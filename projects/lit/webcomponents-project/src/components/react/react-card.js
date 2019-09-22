@@ -6,7 +6,7 @@ class ReactCard extends LitElement {
   static get properties() {
     return {
       reactCardId: { type: String },
-      onSelect: { type: Function }
+      selectButton: { type: Function }
     }
   }
 
@@ -23,10 +23,10 @@ class ReactCard extends LitElement {
   }
 
   firstUpdated() {
-    this.shadowRoot.addEventListener('onSelect', (e) => this.onSelect(e));
+    this.shadowRoot.addEventListener('onClick', (e) => this.onClick(e));
   }
 
-  onSelect(event) {
+  onClick(event) {
     let customEvent = new CustomEvent('onClick', {
       detail: {
         logo: "./src/assets/logos/react.svg"
@@ -42,10 +42,10 @@ class ReactCard extends LitElement {
     return html`
         <react-card-component
           id="${this.reactCardId}"
+          className="${customCardStyle}"
           title="Welcome from React WebComponent"
           logo="./src/assets/logos/react.svg"
           button="Log event from React!"
-          onSelect="${this.onSelect}"
         />
     `;
   }

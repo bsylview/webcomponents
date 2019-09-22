@@ -12,7 +12,7 @@ class CardComponent extends Component {
     body: PropTypes.string,
     button: PropTypes.string,
     className: PropTypes.string,
-    onSelect: PropTypes.func
+    onClick: PropTypes.func
   }
 
   static defaultProps = {
@@ -28,7 +28,7 @@ class CardComponent extends Component {
   }
 
   render() {
-    const { logo, title, body, button, onSelect, className } = this.props;
+    const { logo, title, body, button, onClick, className } = this.props;
 
     return (
       <root.div>
@@ -43,7 +43,7 @@ class CardComponent extends Component {
               {body}
             </div>
             <div className={classNames(className && className.footer, 'footer')}>
-              <button className={classNames(className && className.button, 'button')} onClick={onSelect} >
+              <button className={classNames(className && className.button, 'button')} onClick={onClick} >
                 {button}
               </button>
             </div>

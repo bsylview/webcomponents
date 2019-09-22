@@ -3,7 +3,7 @@ import polymerLogo from '../../logos/polymer.svg';
 
 class LitCardComponent extends Component {
 
-  onSelect = event => {
+  selectButton = event => {
     if (this.props.onSelect){
       this.props.onSelect(event, polymerLogo);
     }
@@ -12,7 +12,7 @@ class LitCardComponent extends Component {
 
   componentDidMount() {
     const myElement = document.querySelector('lit-card-component');
-    myElement.addEventListener('onSelect', this.onSelect);
+    myElement.addEventListener('selectButton', this.selectButton);
   }
 
   render() {

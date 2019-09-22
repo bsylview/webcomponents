@@ -4,11 +4,11 @@ import '../../webcomponents/angular-card-component';
 class AngularCard extends LitElement {
   static get properties() {
     return {
-      onSelect: { type: Function }
+      selectButton: { type: Function }
     }
   }
 
-  onSelect(event) {
+  selectButton(event) {
     let customEvent = new CustomEvent('onClick', {
       detail: {
         logo: "./src/assets/logos/angular.svg"
@@ -25,7 +25,7 @@ class AngularCard extends LitElement {
           title="Welcome from Angular WebComponent"
           logo="./src/assets/logos/angular.svg"
           button="Log event from Angular!"
-          @onSelect=${this.onSelect}
+          @selectButton=${this.selectButton}
         />
     `;
   }

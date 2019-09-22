@@ -3,7 +3,7 @@ import vueLogo from '../../logos/vue.svg';
 
 class VueCardComponent extends Component {
 
-  onSelect = event => {
+  selectButton = event => {
     if (this.props.onSelect){
       this.props.onSelect(event, vueLogo);
     }
@@ -12,7 +12,7 @@ class VueCardComponent extends Component {
 
   componentDidMount() {
     const vueElement = document.querySelector('vue-card-component');
-    vueElement.addEventListener('onSelect', this.onSelect);
+    vueElement.addEventListener('selectButton', this.selectButton);
   }
 
   render() {

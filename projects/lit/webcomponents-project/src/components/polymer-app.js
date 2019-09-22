@@ -9,7 +9,7 @@ class PolymerApp extends LitElement {
   static get properties() {
     return {
       selectedLogo: { type: String },
-      onSelect: { type: Function }
+      onClick: { type: Function }
     }
   }
 
@@ -18,17 +18,17 @@ class PolymerApp extends LitElement {
     this.selectedLogo = "./src/assets/logos/polymer.svg";
   }
 
-  onSelect(event) {
+  onClick(event) {
     this.selectedLogo = event.detail.logo;
   }
 
   render() {
     return html`
       <header-card logo=${this.selectedLogo} ></header-card>
-      <lit-card @onClick=${this.onSelect} ></lit-card>
-      <angular-card @onClick=${this.onSelect} ></angular-card>
-      <react-card @onClick=${this.onSelect} ></react-card>
-      <vue-card @onClick=${this.onSelect} ></vue-card>
+      <lit-card @onClick=${this.onClick} ></lit-card>
+      <angular-card @onClick=${this.onClick} ></angular-card>
+      <react-card @onClick=${this.onClick} ></react-card>
+      <vue-card @onClick=${this.onClick} ></vue-card>
     `;
   }
 }

@@ -3,7 +3,7 @@
     title="Welcome from Lit WebComponent"
     :logo="logo"
     button="Log event from Lit!"
-    @onSelect="onSelect"
+    @selectButton="selectButton"
   >
     <slot></slot>
   </lit-card-component>
@@ -20,7 +20,7 @@ export default {
     };
   },
   methods: {
-    onSelect(event) {
+    selectButton(event) {
       // eslint-disable-next-line no-console
       console.log(event);
       this.$emit("onSelect", { details: { selectedLogo: polymerLogo } });

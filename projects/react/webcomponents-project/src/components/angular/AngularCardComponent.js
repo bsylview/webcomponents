@@ -3,7 +3,7 @@ import angularLogo from '../../logos/angular.svg';
 
 class AngularCardComponent extends Component {
 
-  onSelect = event => {
+  selectButton = event => {
     if (this.props.onSelect){
       this.props.onSelect(event, angularLogo);
     }
@@ -12,7 +12,7 @@ class AngularCardComponent extends Component {
 
   componentDidMount() {
     const myElement = document.querySelector('angular-card-component');
-    myElement.addEventListener('onSelect', this.onSelect);
+    myElement.addEventListener('selectButton', this.selectButton);
   }
 
   render() {

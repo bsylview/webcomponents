@@ -10,7 +10,7 @@
       {{ body }}
     </div>
     <div class="footer">
-      <button class="button" @click="onSelect">
+      <button class="button" @click="onClick">
         {{ button }}
       </button>
     </div>
@@ -26,8 +26,8 @@ export default {
     logo: String
   },
   methods: {
-    onSelect(event) {
-      this.$emit("onSelect", event);
+    onClick(event) {
+      this.$emit("selectButton", event);
     }
   }
 };

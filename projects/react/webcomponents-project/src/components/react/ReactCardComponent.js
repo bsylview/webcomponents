@@ -3,7 +3,7 @@ import reactLogo from '../../logos/react.svg';
 
 class ReactCardComponent extends Component {
 
-  onSelect = event => {
+  onClick = event => {
     if (this.props.onSelect){
       this.props.onSelect(event, reactLogo);
     }
@@ -12,7 +12,7 @@ class ReactCardComponent extends Component {
 
   componentDidMount() {
     const cardComponent = document.getElementById('react-card-component');
-    cardComponent.addEventListener('onSelect', this.onSelect);
+    cardComponent.addEventListener('onClick', this.onClick);
   }
 
   render() {

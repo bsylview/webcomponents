@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-  <title>Micro-frontends using Web Components</title>
+  <title>React WebComponent</title>
 </head>
 
 <body onload="tellComponents()">
@@ -10,7 +10,7 @@
  <script>
     function tellComponents() {
       const reactElContainer =  document.getElementById("react-container");
-      reactElContainer.addEventListener('onSelect', (e) => helloEvent('React'));
+      reactElContainer.addEventListener('onClick', (e) => helloEvent('React'));
     }
 
     function helloEvent(who) {

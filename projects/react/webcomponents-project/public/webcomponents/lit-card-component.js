@@ -2718,7 +2718,7 @@ class CardComponent extends LitElement {
   }
 
   onClick() {
-    this.dispatchEvent(new CustomEvent('onSelect'));
+    this.dispatchEvent(new CustomEvent('selectButton'));
   }
 
   render() {

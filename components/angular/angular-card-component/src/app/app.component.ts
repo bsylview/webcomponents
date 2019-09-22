@@ -1,15 +1,14 @@
 import {   Component,
-  OnInit,
   ViewEncapsulation,
   Input,
   Output,
-  ElementRef,
   EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  /** Use Shadow DOM to encapsulate styles. */
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class AppComponent {
@@ -19,11 +18,11 @@ export class AppComponent {
   @Input() button: string;
 
   // tslint:disable-next-line:no-output-on-prefix
-  @Output() onSelect = new EventEmitter<boolean>();
+  @Output() selectButton = new EventEmitter<boolean>();
 
   constructor() {}
 
   selectEvent($event) {
-    this.onSelect.emit($event);
+    this.selectButton.emit($event);
   }
 }

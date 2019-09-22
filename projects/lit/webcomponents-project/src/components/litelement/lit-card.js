@@ -4,11 +4,11 @@ import '../../webcomponents/lit-card-component';
 class LitCard extends LitElement {
   static get properties() {
     return {
-      onSelect: { type: Function }
+      selectButton: { type: Function }
     }
   }
 
-  onSelect(event) {
+  selectButton(event) {
     let customEvent = new CustomEvent('onClick', {
       detail: {
         logo: "./src/assets/logos/polymer.svg"
@@ -25,7 +25,7 @@ class LitCard extends LitElement {
           title="Welcome from Lit WebComponent"
           logo="./src/assets/logos/polymer.svg"
           button="Log event from Lit!"
-          @onSelect=${this.onSelect}
+          @selectButton=${this.selectButton}
         />
     `;
   }

@@ -3,11 +3,11 @@ import { LitElement, html } from 'lit-element';
 class VueCard extends LitElement {
   static get properties() {
     return {
-      onSelect: { type: Function }
+      selectButton: { type: Function }
     }
   }
 
-  onSelect(event) {
+  selectButton(event) {
     let customEvent = new CustomEvent('onClick', {
       detail: {
         logo: "./src/assets/logos/vue.svg"
@@ -24,7 +24,7 @@ class VueCard extends LitElement {
           title="Welcome from Vue WebComponent"
           logo="./src/assets/logos/vue.svg"
           button="Log event from Vue!"
-          @onSelect=${this.onSelect}
+          @selectButton=${this.selectButton}
         />
     `;
   }
